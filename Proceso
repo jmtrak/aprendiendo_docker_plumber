@@ -19,5 +19,25 @@
   - Usar GIthub vía pestaña o en el terminal.
     - En la pestaña Git ver cuales archivos no están el repositorio de la nube (github) o eN linea de comando de la Terminal usar git status.
     - Configurar el archivo .gitignore que evite subir información sensible.
-    - 
-  
+    *Nota dentro de renv hay un gitignore, se puede dejar o fuionar con el que está en raiz, pero al fusinarlo hay que garantizar que lo copiado tenga la carpeta renv/...
+  - git add . para subir todos los archivos.
+  *NOTA: Antes se recomeinda obtener el token para subir a github, cada proyecto tiene un Token.
+        Se debe ir Settings Globales (la que está dándole click al avatar del usuario)
+        Se debe ir  developers setting
+        Ir a Personal access tokens, Tokens (classic)
+        En generate New Token : New personal access token (classic)
+        Añadir una descripcion, marcar SOLO las casillas de repo - aparcera en verde un token. 
+        EL TOKEN SOLO APARECEÄ ESA VEZ: COPIAR Y PEGARLO EN LUGAR SEGURO
+  - Una vez guardado se puede hacer el primer Push a Github
+    EN LA TERMINAL - no la cónsola
+    - git add . (añade a la subida todos los archivos excepto los de gitignore), se puede poner también git add [NOMBRE ARCHIVO]
+    - git commit -m "Poner un mensaje que describa los cambios lo más específico posible"
+    - git push origin main - enviar los archivos con su comentatio
+      pedirá usuario: correo de github
+      Password: EL TOKEN, no el passoword de github.
+    - git status para confirmar: Your branch is up to date with 'origin/main'.
+    - Ir al github del proyecto para verfificar
+    
+    
+    
+    

@@ -47,9 +47,11 @@ datos <- read_xlsx(destino) |>
   clean_names()
 
 # Guardar datos en formato .parquet
-write_parquet(datos, glue("datos/", Sys.Date(),"padron_por_sexo.parquet"))
+fecha <- as.character(ymd(as_date(Sys.Date())))
+destino_parquet <- glue("datos/",fecha,"_padron_por_sexo.parquet")
+write_parquet(datos,destino_parquet)
 
 # Leerlo después (más rápido y liviano)
-df_arrow <- read_parquet("datos/padron_por_sexo.parquet")
+df_arrow <- read_parquet(destino_parquet)
 
 

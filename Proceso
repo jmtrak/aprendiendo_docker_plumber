@@ -1,42 +1,43 @@
-1. Crear en Github un reporsitorio.
+1. Crear en Github un repositorio.
   - Copiar el URL del repositorio para que se pueda crear el proyecto en Rstudio
 2. Abrir el proyecto en R usando la opción de Control de Cambio
   - Pegar la URL del repositorio
   - Usar el mismo nombre del repositorio como nombre de carpeta
   - Escoger el lugar donde crear esa carpeta.
 3. Configuración del Proyecto
-  - En la consola usar comamdo renv::init() (en caso que no se tenga instalado
+  - En la consola usar comando renv::init() (en caso que no se tenga instalado
     instalar install.package (renv)). Renv es un paquete de R que ayuda a crear un
     ambiente de trabajo reproducible en R (https://rstudio.github.io/renv/articles/renv.html)
   - Crear un Script que se llame Dependencias.R, allí solo estarán los paquetes que serán usados
   - Al usar RENV se deben instalar los paquetes, ¿Por qué? Porque renv crea un ambiente aisaldo,
-    la ventaja de tener un ambiente aislado es que solo alamacenas las libererías que efectivamente se usan
+    la ventaja de tener un ambiente aislado es que solo alamacenas las librerías que efectivamente se usan
     permite exportar la carpeta del Proyecto con sus librerías asociadas.
-  - Cada vez que se instalan librerías nuevas hay que actualizar el R-Enviroment (RENV) usando la funcion
+  - Cada vez que se instalan librerías nuevas hay que actualizar el R-Enviroment (RENV) usando la función
     renv::status() para ver si el Ambiente está actualizado o no. 
   - En caso negativo usar renv::snapshot() 
-4. COnfigurar el GIt
+4. Configurar el Git
   - Usar GIthub vía pestaña o en el terminal.
     - En la pestaña Git ver cuales archivos no están el repositorio de la nube (github) o eN linea de comando de la Terminal usar git status.
     - Configurar el archivo .gitignore que evite subir información sensible.
-    *Nota dentro de renv hay un gitignore, se puede dejar o fuionar con el que está en raiz, pero al fusinarlo hay que garantizar que lo copiado tenga la carpeta renv/...
-  - git add . para subir todos los archivos.
-  *NOTA: Antes se recomeinda obtener el token para subir a github, cada proyecto tiene un Token.
-        Se debe ir Settings Globales (la que está dándole click al avatar del usuario)
-        Se debe ir  developers setting
-        Ir a Personal access tokens, Tokens (classic)
-        En generate New Token : New personal access token (classic)
-        Añadir una descripcion, marcar SOLO las casillas de repo - aparcera en verde un token. 
-        EL TOKEN SOLO APARECEÄ ESA VEZ: COPIAR Y PEGARLO EN LUGAR SEGURO
+    *Nota dentro de renv hay un gitignore, se puede dejar o fuionar con el que está en raiz, 
+      pero al fusionarlo hay que garantizar que lo copiado tenga la carpeta renv/...
+  - Usar git add . para subir todos los archivos.
+  * NOTA: Antes se recomienda obtener el token para subir a github, cada proyecto tiene un Token.
+        - Se debe ir Settings Globales (la que está dándole click al avatar del usuario)
+        - Se debe ir developers setting
+        - Ir a Personal access tokens, Tokens (classic)
+        - En generate New Token: New personal access token (classic)
+        - Añadir una descripción, marcar SOLO las casillas de repo - aparcera en verde un token. 
+        EL TOKEN SOLO APARECEÁ ESA VEZ: COPIAR Y PEGARLO EN LUGAR SEGURO
   - Una vez guardado se puede hacer el primer Push a Github
-    EN LA TERMINAL - no la cónsola
+    EN LA TERMINAL - no la consola
     - git add . (añade a la subida todos los archivos excepto los de gitignore), se puede poner también git add [NOMBRE ARCHIVO]
     - git commit -m "Poner un mensaje que describa los cambios lo más específico posible"
     - git push origin main - enviar los archivos con su comentatio
       pedirá usuario: correo de github
       Password: EL TOKEN, no el passoword de github.
     - git status para confirmar: Your branch is up to date with 'origin/main'.
-    - Ir al github del proyecto para verfificar
+    - Ir al github del proyecto para verficar
     
     
     

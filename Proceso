@@ -1,0 +1,23 @@
+1. Crear en Github un reporsitorio.
+  - Copiar el URL del repositorio para que se pueda crear el proyecto en Rstudio
+2. Abrir el proyecto en R usando la opción de Control de Cambio
+  - Pegar la URL del repositorio
+  - Usar el mismo nombre del repositorio como nombre de carpeta
+  - Escoger el lugar donde crear esa carpeta.
+3. Configuración del Proyecto
+  - En la consola usar comamdo renv::init() (en caso que no se tenga instalado
+    instalar install.package (renv)). Renv es un paquete de R que ayuda a crear un
+    ambiente de trabajo reproducible en R (https://rstudio.github.io/renv/articles/renv.html)
+  - Crear un Script que se llame Dependencias.R, allí solo estarán los paquetes que serán usados
+  - Al usar RENV se deben instalar los paquetes, ¿Por qué? Porque renv crea un ambiente aisaldo,
+    la ventaja de tener un ambiente aislado es que solo alamacenas las libererías que efectivamente se usan
+    permite exportar la carpeta del Proyecto con sus librerías asociadas.
+  - Cada vez que se instalan librerías nuevas hay que actualizar el R-Enviroment (RENV) usando la funcion
+    renv::status() para ver si el Ambiente está actualizado o no. 
+  - En caso negativo usar renv::snapshot() 
+4. COnfigurar el GIt
+  - Usar GIthub vía pestaña o en el terminal.
+    - En la pestaña Git ver cuales archivos no están el repositorio de la nube (github) o eN linea de comando de la Terminal usar git status.
+    - Configurar el archivo .gitignore que evite subir información sensible.
+    - 
+  
